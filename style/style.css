@@ -1,0 +1,63 @@
+body {
+  background-color:   #3CB371;
+}
+
+header {
+  max-width: 1000px;
+  margin: auto;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+#container {
+  max-width: 1000px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #6c757d;
+}
+
+a:hover {
+  color: #198754;
+  text-decoration: underline;
+}
+
+footer {
+	max-width: 1000px;
+	margin: auto;
+}
+
+img {
+  width: 160px;
+}
+
+.logo img {
+  width: 220px;
+}
+
+.container-for-info img {
+  width: 48px;
+  height: 48px;
+}
+
+.social img {
+  width: 24px;
+  height: 24px;
+}
+
+footer #info {
+  font-size: 14px;
+}
+
+.card {
+  width: 800px;
+}
+
+.card:hover {
+  transform: scale(1.01);
+  transition-duration: 0.3s;
+}

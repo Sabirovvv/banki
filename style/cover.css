@@ -1,0 +1,30 @@
+/*
+ * Globals
+ */
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+.cover-container {
+  max-width: 42em;
+}
+
+.container-fon {
+  margin: 0 auto;
+  min-height: 500px;
+  max-width: 1000px;
+  background-image: url(../image/fon.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#qwe {
+  margin-top: 200px;
+}
