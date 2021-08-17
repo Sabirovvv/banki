@@ -6,20 +6,21 @@
 	<!-- CSS only -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="style/style.css">
-	<link rel="stylesheet" href="style/cover.css">
 	<title>Добро пожаловать</title>
 </head>
 <body>
 
-	<header class="logo mt-3 rounded">
-		<div class="row align-items-center">
-			<div class="col">
-				<a href="#"><img class="px-2" src="image/logo.svg" alt="logo"></a>
-			</div>
-			<div id="nav" class="col d-none d-md-block text-end fs-6 me-3">
-				<a class="me-3" href="#">ГЛАВНАЯ</a>
-				<a class="me-3" href="#">БАНКИ</a>
-				<a href="#">КОНТАКТЫ</a>
+	<header class="logo shadow-sm">
+		<div class="navigation">
+			<div class="row align-items-center">
+				<div class="col mx-3">
+					<a href="#"><img class="px-2" src="image/logo.svg" alt="logo"></a>
+				</div>
+				<div class="col d-none d-md-block text-end fs-5 me-3">
+					<a class="me-3" href="#">ГЛАВНАЯ</a>
+					<a class="me-3" onclick="document.getElementById('container-for-bank').scrollIntoView();">БАНКИ</a>
+					<a href="#">КОНТАКТЫ</a>
+				</div>
 			</div>
 		</div>
 	</header>
@@ -28,32 +29,30 @@
 
 		<div class="container-fon d-flex text-center text-white bg-dark">
 			<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-				<main id="qwe" class="px-3">
+				<main id="credits" class="px-3">
 					<h1>Мастер подбора кредитов</h1>
-					<p class="lead">Персональный подбор кредита на любые цели и отправка заявки в банк</p>
-					<p class="lead">
+					<p class="fs-5">Персональный подбор кредита на любые цели и отправка заявки в банк</p>
 						<button class="btn btn-outline-light" onClick="document.getElementById('container').scrollIntoView();">Подобрать</button>
-					</p>
 				</main>
 			</div>
 		</div>
 
 	<div id="container" class="container pt-3 rounded">
 
-		<div class="row p-3">
+		<div id="form" class="row p-3">
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<p class="text-success fw-bold fs-5">Цель кредита</p>
+				<p class="fw-bold fs-5">Цель кредита</p>
 				<select class="form-select">
 					<option value="1">Просто деньги</option>
 					<option value="2">Покупка автомобиля</option>
 				</select>
 			</div>
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<p class="text-success fw-bold fs-5">Сумма</p>
+				<p class="fw-bold fs-5">Сумма</p>
 				<input class="form-control" type="text" value="100000" aria-label="default input example">
 			</div>
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<p class="text-success fw-bold fs-5">Срок кредита</p>
+				<p class="fw-bold fs-5">Срок кредита</p>
 				<select class="form-select">
 					<option value="1">3 месяца</option>
 					<option value="2">6 месяцев</option>
@@ -63,7 +62,7 @@
 				</select>
 			</div>
 			<div class="col-12 col-sm-6 col-md-4 col-lg-3">
-				<p class="text-success fw-bold fs-5">Обеспечение</p>
+				<p class="fw-bold fs-5">Обеспечение</p>
 				<select class="form-select">
 					<option value="1">Без залога</option>
 					<option value="2">Предоставлю залог</option>
@@ -71,13 +70,13 @@
 			</div>
 		</div>
 		<div class="row p-3">
-			<div class="col text-end">
-				<button onclick="alert('hello')" class="btn btn-warning text-light p-2">Подобрать кредит</button>
+			<div class="col text-center">
+				<button onclick="alert('hello')" id="credit" class="btn p-2">Подобрать кредит</button>
 			</div>
 		</div>
 
 		<div class="container-for-info px-4 py-5">
-			<h2 class="pb-2 border-bottom fw-bold">Как работает сервис</h2>
+			<h2 class="pb-3 text-center border-bottom fw-bold">Как работает сервис</h2>
 			<div class="row text-center">
 				<div class="col-12 col-sm-6 col-md-4 col-lg-3">
 					<img class="m-3" src="image/new-file.png" alt="doc.png">
@@ -98,30 +97,17 @@
 			</div>
 		</div>
 
-		<div class="container-card">
-			<div class="row d-flex justify-content-center">
-				<div class="col-12 shadow card mb-1 p-2">
-					<div class="row">
-						<div class="bank-logo col-12 col-md-3 text-center">
-							<img src="image/bank-logo.png" alt="">
-						</div>
-						<div class="col-12 col-md-9">
-							<div class="row">
-								<h2 class="text-center">Demir Bank</h2>
-								<p class="fs-7">
-									Срок кредита: до 5 лет. <br>
-									Сумма кредита: до 500000 сом. <br>
-									Обеспечение кредита: без залога / с залогом.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col text-end">
-							<button class="btn btn-outline-success">Оформить</button>
-							<button class="btn btn-outline-success">Сайт банка</button>
-						</div>
-					</div>
+		<div id="container-for-bank" class="container-for-bank px-4 py-5">
+			<h2 class="pb-3 text-center border-bottom fw-bold">Банки партнеры</h2>
+			<div class="row text-center">
+				<div class="col-12 col-sm-6 col-md-4">
+					<img class="m-3" src="image/optima.jpg" alt="">
+				</div>
+				<div class="col-12 col-sm-6 col-md-4">
+					<img class="m-3" src="image/bank-logo.png" alt="">
+				</div>
+				<div class="col-12 col-sm-6 col-md-4">
+					<img class="m-3" src="image/optima.jpg" alt="">
 				</div>
 			</div>
 		</div>
@@ -129,22 +115,24 @@
 	</div>
 
 	
-	<footer class="bg-secondary p-2">
-		<div class="row">
-			<div id="info" class="col-12 col-md-8 text-light">
-				Сервис «Подбор кредита» осуществляет бесплатный поиск выгодных предложений с учетом кредитной истории заемщика. Процентные ставки и срок погашения кредита индивидуальны, зависят от выбранного банка, срок от 3 месяцев.
+	<footer class="p-2">
+		<div class="footer-container">
+			<div class="row">
+				<div id="info" class="col-12 col-md-8 text-light">
+					Сервис «Подбор кредита» осуществляет бесплатный поиск выгодных предложений с учетом кредитной истории заемщика. Процентные ставки и срок погашения кредита индивидуальны, зависят от выбранного банка, срок от 3 месяцев.
+				</div>
+				<div class="col-12 col-md-4 text-center mt-1">
+					<a href="#"><img src="image/logo-footer.svg" alt=""></a>
+				</div>
+				<div class="col-12 social mt-2 pe-5">
+					<a href="#"><img class="mx-2" src="image/facebook.svg" alt=""></a>
+					<a href="#"><img class="mx-2" src="image/instagram.svg" alt=""></a>
+					<a href="#"><img class="mx-2" src="image/whatsapp.svg" alt=""></a>
+				</div>
 			</div>
-			<div class="col-12 col-md-4 text-center mt-1">
-				<a href="#"><img src="image/logo-footer.svg" alt=""></a>
+			<div class="fw-bold text-light mt-3">
+				2021 Кыргызстан г. Бишкек
 			</div>
-			<div class="col-12 social mt-2 pe-5">
-				<a href="#"><img class="mx-2" src="image/facebook.svg" alt=""></a>
-				<a href="#"><img class="mx-2" src="image/instagram.svg" alt=""></a>
-				<a href="#"><img class="mx-2" src="image/whatsapp.svg" alt=""></a>
-			</div>
-		</div>
-		<div class="fw-bold text-light mt-3">
-			2021 Кыргызстан г. Бишкек
 		</div>
 	</footer>
 

@@ -1,14 +1,32 @@
 body {
-  background-color:   #3CB371;
+  background-color:   #ffffff;
 }
 
 header {
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
   background-color: #ffffff;
   position: sticky;
   top: 0;
   z-index: 999;
+}
+
+.navigation {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.container-fon {
+  margin: 0 auto;
+  min-height: 500px;
+  width: 100%;
+  background-image: url(../image/fon.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+#credits {
+  margin-top: 200px;
 }
 
 #container {
@@ -18,7 +36,8 @@ header {
 
 a {
   text-decoration: none;
-  color: #6c757d;
+  cursor: pointer;
+  color: #313131;
 }
 
 a:hover {
@@ -26,9 +45,28 @@ a:hover {
   text-decoration: underline;
 }
 
+#form {
+  color: #3CB371;
+}
+
+#credit {
+  background-color: #3CB371;
+  color: #ffffff;
+}
+
+#credit:hover {
+  transform: scale(1.03);
+}
+
 footer {
-	max-width: 1000px;
-	margin: auto;
+	width: 100%;
+	margin: 0 auto;
+    background-color: #313131;
+}
+
+.footer-container {
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 img {
@@ -42,6 +80,14 @@ img {
 .container-for-info img {
   width: 48px;
   height: 48px;
+}
+
+.container-for-bank img {
+  width: 300px;
+}
+
+.container-for-info h2 {
+  color: #313131;
 }
 
 .social img {
